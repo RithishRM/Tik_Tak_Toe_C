@@ -21,7 +21,6 @@ void printboard(){
     printf(" %c | %c | %c \n", board[1][0], board[1][1], board[1][2]);
     printf("---|---|---\n");
     printf(" %c | %c | %c \n", board[2][0], board[2][1], board[2][2]);
-
 }
 
 int freespaces(){
@@ -57,12 +56,14 @@ void playermove(){
 }
 
 char checkwinner(){
-    for(int i=0;i<3;i++){   //Checks Rows
+    //Checks Rows
+    for(int i=0;i<3;i++){   
         if(board[i][0]==board[i][1]&& board[i][0]==board[i][2]){
             return board[i][0];
         }
     }
-    for(int i=0;i<3;i++){   //Checks Column
+    //Checks Column
+    for(int i=0;i<3;i++){   
         if(board[0][i]==board[1][i]&& board[0][i]==board[2][i]){
             return board[0][i];
         }
